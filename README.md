@@ -5,20 +5,21 @@ This repository contains my personal configuration files.
 - neovim
 - sway
 - foot
-
-## Dependencies
-### sway
-- wmenu
-- gammastep
-- pulseaudio
-- brightnessctl
-### neovim
-- wl-clipboard
-- clangd
+- waybar
+- wofi
 
 ## Setup guide
-First, run the setup script: <br>
-```./setup.sh``` <br>
-<br>
+Install these: <br>
+```
+nvim sway foot waybar wofi gammastep pulseaudio brightnessctl wl-clipboard clangd
+
+```
+Run the setup script: <br>
+```
+./setup.sh
+
+```
 Then, open neovim and run this command to install plugins: <br>
-```:PlugInstall```
+```
+:PlugInstall
+```

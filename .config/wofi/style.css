@@ -1,0 +1,31 @@
+* {
+    font-family: monospace;
+    font-size: 16px;
+    border: none;
+    background-color: #28323c;
+    color: #ffffff;
+}
+
+#input {
+    margin: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#outer-box {
+    margin: 5px;
+}
+
+#scroll {
+    margin: 0px;
+}
+
+#text {
+    margin: 5px;
+}
+
+#entry:selected {
+    background-color: #647882;
+}

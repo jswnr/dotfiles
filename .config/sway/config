@@ -5,10 +5,11 @@ set $down j
 set $up k
 set $right l
 set $term footclient
-set $menu wmenu-run -f "monospace 12"
+set $menu wofi --show drun
 
 ### Autostart
 exec foot -s
+exec waybar
 exec gammastep -O 4500
 
 ### Font
@@ -17,6 +18,7 @@ font pango:monospace 12
 ### Border
 default_border pixel 2
 default_floating_border pixel
+smart_borders on
 
 ### Output configuration
 # output eDP-1 mode 1920x1080@60Hz position 0,0
@@ -143,17 +145,10 @@ mode "resize" {
 }
 bindsym $mod+z mode "resize"
 
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    status_command while echo "$(cat /sys/class/power_supply/BAT0/capacity)% / $(date +'%I:%M %p')"; do sleep 60; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+# class                 border  background text    indicator child_border
+client.focused          #647882 #28323c    #ffffff #647882   #647882
+client.focused_inactive #647882 #28323c    #ffffff #647882   #647882
+client.unfocused        #28323c #28323c    #ffffff #28323c   #28323c
+client.urgent           #dc5a5a #28323c    #ffffff #dc5a5a   #dc5a5a
 
 include /etc/sway/config.d/*
