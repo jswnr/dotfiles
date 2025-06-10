@@ -1,23 +1,27 @@
+@define-color fg #ffffff;
+@define-color bg #28323c;
+@define-color bg_selected #647882;
+
 * {
     font-family: monospace;
     font-size: 16px;
 }
 
 window {
-    background-color: #28323c;
+    background-color: @bg;
 }
 
 #input {
     margin: 5px;
     border: none;
-    color: #ffffff;
-    background-color: #28323c;
+    color: @fg;
+    background-color: @bg;
 }
 
 #inner-box, #outer-box {
     margin: 5px;
     border: none;
-    background-color: #28323c;
+    background-color: @bg;
 }
 
 #scroll {
@@ -27,9 +31,9 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: #ffffff;
+    color: @fg;
 }
 
 #entry:selected {
-    background-color: #647882;
+    background-color: @bg_selected;
 }

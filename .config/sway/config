@@ -145,10 +145,15 @@ mode "resize" {
 }
 bindsym $mod+z mode "resize"
 
-# class                 border  background text    indicator child_border
-client.focused          #647882 #28323c    #ffffff #647882   #647882
-client.focused_inactive #647882 #28323c    #ffffff #647882   #647882
-client.unfocused        #28323c #28323c    #ffffff #28323c   #28323c
-client.urgent           #dc5a5a #28323c    #ffffff #dc5a5a   #dc5a5a
+set $col_focused #b4c8dc
+set $col_unfocused #28323c
+set $col_text #ffffff
+set $col_urgent #dc5a5a
+
+# class                 border         background     text      indicator      child_border
+client.focused          $col_focused   $col_unfocused $col_text $col_focused   $col_focused
+client.focused_inactive $col_unfocused $col_unfocused $col_text $col_unfocused $col_unfocused
+client.unfocused        $col_unfocused $col_unfocused $col_text $col_unfocused $col_unfocused
+client.urgent           $col_urgent    $col_unfocused $col_text $col_urgent    $col_urgent
 
 include /etc/sway/config.d/*

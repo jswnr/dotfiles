@@ -1,3 +1,14 @@
+@define-color fg #ffffff;
+@define-color bg #28323c;
+@define-color bg_focused #647882;
+@define-color bg_button_hover #000000;
+@define-color border_bar #647882;
+@define-color shadow #ffffff;
+@define-color module1 #46c8ff;
+@define-color module2 #ffe63c;
+@define-color module3 #46ff46;
+@define-color urgent #dc5a5a;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, monospace;
@@ -5,13 +16,9 @@
 }
 
 window#waybar {
-    background-color: #28323c;
-    border-bottom: 3px solid #647882;
-    color: #ffffff;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
+    background-color: @bg;
+    border-bottom: 3px solid @border_bar;
+    color: @fg;
 }
 
 button {
@@ -24,39 +31,40 @@ button {
 
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px @shadow;
     transition: none;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @fg;
 }
 
 #workspaces button:hover {
-    background: #000000;
+    background: @bg_button_hover;
 }
 
 #workspaces button.focused {
-    background-color: #64727d;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @bg_focused;
+    box-shadow: inset 0 -3px @shadow;
 }
 
 #workspaces button.urgent {
-    background-color: #dc5a5a;
+    background-color: @urgent;
 }
 
 #mode {
-    background-color: #64727d;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @bg_focused;
+    box-shadow: inset 0 -3px @shadow;
+    padding: 0 5px 0 5px;
 }
 
 #clock,
 #battery,
 #pulseaudio {
     padding: 0 10px;
-    color: #ffffff;
+    color: @fg;
     margin-bottom: 3px;
     margin-left: 5px;
 }
@@ -76,23 +84,19 @@ button:hover {
     margin-right: 0;
 }
 
-#mode {
-    padding: 0 5px 0 5px;
+#battery {
+    border-bottom: 4px solid @module3;
 }
 
 #clock {
-    border-bottom: 4px solid #46c8ff;
-}
-
-#battery {
-    border-bottom: 4px solid #46ff46;
+    border-bottom: 4px solid @module1;
 }
 
 #pulseaudio {
-    border-bottom: 4px solid #ffe63c;
+    border-bottom: 4px solid @module2;
 }
 
 #battery.critical,
 #pulseaudio.muted {
-    background-color: #dc5a5a;
+    border-bottom: 4px solid @urgent
 }
