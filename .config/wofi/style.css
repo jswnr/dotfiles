@@ -34,6 +34,10 @@ window {
     color: @fg;
 }
 
+#entry arrow {
+    color: @fg;
+}
+
 #entry:selected {
     background-color: @bg_selected;
 }
