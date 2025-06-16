@@ -17,7 +17,8 @@ font pango:monospace 12
 
 ### Border
 default_border pixel 2
-default_floating_border pixel
+default_floating_border pixel 2
+titlebar_border_thickness 2
 smart_borders on
 
 ### Output configuration
@@ -145,7 +146,7 @@ mode "resize" {
 }
 bindsym $mod+z mode "resize"
 
-set $col_focused #b4c8dc
+set $col_focused #b4bec8
 set $col_unfocused #28323c
 set $col_text #ffffff
 set $col_urgent #dc5a5a
