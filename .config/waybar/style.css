@@ -1,13 +1,7 @@
 @define-color fg #ffffff;
-@define-color bg #28323c;
-@define-color bg_focused #647882;
-@define-color bg_button_hover #000000;
-@define-color border_bar #647882;
-@define-color shadow #ffffff;
-@define-color module1 #46c8ff;
-@define-color module2 #ffe63c;
-@define-color module3 #46ff46;
-@define-color urgent #dc5a5a;
+@define-color bg #000000;
+@define-color focused #506478;
+@define-color urgent #c85050;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -17,37 +11,27 @@
 
 window#waybar {
     background-color: @bg;
-    border-bottom: 3px solid @border_bar;
     color: @fg;
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
 }
 
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @shadow;
+    box-shadow: none;
     transition: none;
 }
 
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
     color: @fg;
 }
 
-#workspaces button:hover {
-    background: @bg_button_hover;
-}
-
 #workspaces button.focused {
-    background-color: @bg_focused;
-    box-shadow: inset 0 -3px @shadow;
+    background-color: @focused;
 }
 
 #workspaces button.urgent {
@@ -55,8 +39,7 @@ button:hover {
 }
 
 #mode {
-    background-color: @bg_focused;
-    box-shadow: inset 0 -3px @shadow;
+    background-color: @focused;
     padding: 0 5px 0 5px;
 }
 
@@ -65,8 +48,6 @@ button:hover {
 #pulseaudio {
     padding: 0 10px;
     color: @fg;
-    margin-bottom: 3px;
-    margin-left: 5px;
 }
 
 #window,
@@ -84,19 +65,7 @@ button:hover {
     margin-right: 0;
 }
 
-#battery {
-    border-bottom: 4px solid @module3;
-}
-
-#clock {
-    border-bottom: 4px solid @module1;
-}
-
-#pulseaudio {
-    border-bottom: 4px solid @module2;
-}
-
 #battery.critical,
 #pulseaudio.muted {
-    border-bottom: 4px solid @urgent
+    background-color: @urgent;
 }

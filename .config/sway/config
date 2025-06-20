@@ -146,10 +146,10 @@ mode "resize" {
 }
 bindsym $mod+z mode "resize"
 
-set $col_focused #b4bec8
-set $col_unfocused #28323c
+set $col_focused #a0b4c8
+set $col_unfocused #000000
 set $col_text #ffffff
-set $col_urgent #dc5a5a
+set $col_urgent #c85050
 
 # class                 border         background     text      indicator      child_border
 client.focused          $col_focused   $col_unfocused $col_text $col_focused   $col_focused

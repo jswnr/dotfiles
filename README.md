@@ -11,7 +11,7 @@ This repository contains my personal configuration files.
 ## Setup guide
 Install these: <br>
 ```
-nvim sway foot waybar wofi gammastep pulseaudio brightnessctl wl-clipboard clangd
+nvim sway foot waybar wofi gammastep otf-font-awesome pulseaudio brightnessctl wl-clipboard clangd
 
 ```
 Run the setup script: <br>

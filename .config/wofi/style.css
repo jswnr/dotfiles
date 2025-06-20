@@ -1,6 +1,6 @@
 @define-color fg #ffffff;
-@define-color bg #28323c;
-@define-color bg_selected #647882;
+@define-color bg #000000;
+@define-color selected #506478;
 
 * {
     font-family: monospace;
@@ -39,5 +39,5 @@ window {
 }
 
 #entry:selected {
-    background-color: @bg_selected;
+    background-color: @selected;
 }
