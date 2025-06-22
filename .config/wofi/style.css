@@ -1,6 +1,6 @@
 @define-color fg #ffffff;
 @define-color bg #000000;
-@define-color selected #506478;
+@define-color selected #646464;
 
 * {
     font-family: monospace;
