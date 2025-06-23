@@ -59,10 +59,12 @@ button:hover {
 #mode {
     background-color: @bg;
     padding: 0 5px 0 5px;
+    margin-left: 5px;
 }
 
 #scratchpad {
     background-color: @bg;
+    margin-left: 5px;
 }
 
 window#waybar.empty #window {  
