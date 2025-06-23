@@ -1,7 +1,8 @@
 @define-color fg #ffffff;
-@define-color bg #000000;
-@define-color focused #646464;
-@define-color urgent #c85050;
+@define-color bg rgba(0, 0, 0, 0.4);
+@define-color focused #006496;
+@define-color shadow #ffffff;
+@define-color urgent #b45050;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -10,8 +11,21 @@
 }
 
 window#waybar {
-    background-color: @bg;
+    background-color: transparent;
     color: @fg;
+}
+
+#workspaces,
+#mode,
+#scratchpad,
+#window,
+#battery,
+#wireplumber,
+#clock {
+    background-color: @bg;
+    border-radius: 10px;
+    padding: 0 10px;
+
 }
 
 button {
@@ -25,13 +39,17 @@ button:hover {
     transition: none;
 }
 
+#workspaces {
+    margin-left: 15px;
+}
+
 #workspaces button {
     padding: 0 5px;
     color: @fg;
 }
 
 #workspaces button.focused {
-    background-color: @focused;
+    box-shadow: inset 0 -3px @shadow;
 }
 
 #workspaces button.urgent {
@@ -39,33 +57,30 @@ button:hover {
 }
 
 #mode {
-    background-color: @focused;
+    background-color: @bg;
     padding: 0 5px 0 5px;
+}
+
+#scratchpad {
+    background-color: @bg;
+}
+
+window#waybar.empty #window {  
+    background-color: transparent;
 }
 
 #clock,
 #battery,
-#pulseaudio {
-    padding: 0 10px;
+#wireplumber {
+    margin-right: 5px;
     color: @fg;
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#clock {
+    margin-right: 15px;
 }
 
 #battery.critical,
-#pulseaudio.muted {
+#wireplumber.muted {
     background-color: @urgent;
 }

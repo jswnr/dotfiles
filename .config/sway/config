@@ -5,7 +5,7 @@ set $down j
 set $up k
 set $right l
 set $term footclient
-set $menu wofi --show drun
+set $menu wofi --show drun --allow-images
 
 ### Autostart
 exec foot -s
@@ -21,8 +21,13 @@ default_floating_border pixel 2
 titlebar_border_thickness 2
 smart_borders on
 
+### Gaps
+gaps inner 10
+gaps outer 5
+
 ### Output configuration
 # output eDP-1 mode 1920x1080@60Hz position 0,0
+# output * bg <path> fill
 
 ### Input configuration
 input type:keyboard {
@@ -53,14 +58,14 @@ input type:touchpad {
 
     floating_modifier $mod normal
 
-    # PulseAudio volume control
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    # Volume control
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
     # Brightness control
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 #
 # Moving around:
 #
@@ -146,8 +151,8 @@ mode "resize" {
 }
 bindsym $mod+z mode "resize"
 
-set $col_focused #aaaaaa
-set $col_unfocused #000000
+set $col_focused #ffffff
+set $col_unfocused #00000064
 set $col_text #ffffff
 set $col_urgent #c85050
 

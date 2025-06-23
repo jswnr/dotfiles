@@ -13,7 +13,7 @@
     ],
     "modules-right": [
         "battery",
-        "pulseaudio",
+        "wireplumber",
         "clock"
     ],
     "sway/scratchpad": {
@@ -23,32 +23,25 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
+    "sway/window": {
+        "max-length": 100
+    },
     "battery": {
+        "tooltip": false,
         "states": {
             "critical": 20
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{capacity}% ",
+        "format-charging": "{capacity}% "
     },
-    "pulseaudio": {
+    "clock": {
+        "tooltip": false,
+        "format": "{:%H:%M}  "
+    },
+    "wireplumber": {
+        "tooltip": false,
         "scroll-step": 1,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
+        "format": "{volume}% ",
+        "format-muted": "{volume}%  "
+    }
 }
