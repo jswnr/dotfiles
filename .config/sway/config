@@ -153,7 +153,7 @@ bindsym $mod+z mode "resize"
 
 ### Colors
 set $col_focused #ffffff
-set $col_unfocused #00000064
+set $col_unfocused #00000080
 set $col_text #ffffff
 set $col_urgent #b45050
 
