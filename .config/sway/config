@@ -155,7 +155,7 @@ bindsym $mod+z mode "resize"
 set $col_focused #ffffff
 set $col_unfocused #00000064
 set $col_text #ffffff
-set $col_urgent #c85050
+set $col_urgent #b45050
 
 # class                 border         background     text      indicator      child_border
 client.focused          $col_focused   $col_unfocused $col_text $col_focused   $col_focused

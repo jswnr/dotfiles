@@ -1,6 +1,5 @@
 @define-color fg #ffffff;
 @define-color bg rgba(0, 0, 0, 0.4);
-@define-color focused #006496;
 @define-color shadow #ffffff;
 @define-color urgent #b45050;
 
