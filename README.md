@@ -11,15 +11,14 @@ This repository contains my personal configuration files.
 ## Setup guide
 Install these: <br>
 ```
-nvim sway foot waybar wofi gammastep otf-font-awesome pulseaudio brightnessctl wl-clipboard clangd
-
+nvim sway foot waybar wofi gammastep swaybg pipewire wireplumber brightnessctl otf-font-awesome wl-clipboard clangd
 ```
 Run the setup script: <br>
 ```
 ./setup.sh
-
 ```
-Then, open neovim and run this command to install plugins: <br>
+Open neovim and run this command to install plugins: <br>
 ```
 :PlugInstall
 ```
+Configure the output and the wallpaper in sway config.

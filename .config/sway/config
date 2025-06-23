@@ -25,11 +25,11 @@ smart_borders on
 gaps inner 10
 gaps outer 5
 
-### Output configuration
+### Output
 # output eDP-1 mode 1920x1080@60Hz position 0,0
 # output * bg <path> fill
 
-### Input configuration
+### Input
 input type:keyboard {
     xkb_layout "pl"
 }
@@ -151,6 +151,7 @@ mode "resize" {
 }
 bindsym $mod+z mode "resize"
 
+### Colors
 set $col_focused #ffffff
 set $col_unfocused #00000064
 set $col_text #ffffff
