@@ -32,7 +32,8 @@
             "critical": 20
         },
         "format": "{capacity}% ",
-        "format-charging": "{capacity}% "
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% "
     },
     "clock": {
         "tooltip": false,
