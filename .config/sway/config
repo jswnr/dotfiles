@@ -27,7 +27,7 @@ gaps outer 5
 
 ### Output
 # output eDP-1 mode 1920x1080@60Hz position 0,0
-# output * bg <path> fill
+# output * bg /home/js/images/wallpaper.png fill
 
 ### Input
 input type:keyboard {

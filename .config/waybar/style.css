@@ -9,8 +9,12 @@
     font-size: 16px;
 }
 
-window#waybar {
+#waybar {
     background-color: transparent;
+}
+
+#waybar > box {
+    padding: 0 15px;
 }
 
 #workspaces,
@@ -24,7 +28,6 @@ window#waybar {
     background-color: @bg;
     border-radius: 10px;
     padding: 0 10px;
-
 }
 
 button {
@@ -36,10 +39,6 @@ button:hover {
     background: inherit;
     box-shadow: none;
     transition: none;
-}
-
-#workspaces {
-    margin-left: 15px;
 }
 
 #workspaces button {
@@ -55,16 +54,8 @@ button:hover {
     background-color: @urgent;
 }
 
-#mode {
-    padding: 0 5px 0 5px;
-}
-
 window#waybar.empty #window {  
     background-color: transparent;
-}
-
-#clock {
-    margin-right: 15px;
 }
 
 #battery.critical,
