@@ -22,8 +22,7 @@ titlebar_border_thickness 2
 smart_borders on
 
 ### Gaps
-gaps inner 10
-gaps outer 5
+gaps inner 15
 
 ### Output
 # output eDP-1 mode 1920x1080@60Hz position 0,0
