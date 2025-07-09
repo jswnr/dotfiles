@@ -18,5 +18,6 @@ vim.cmd('silent! colorscheme onedark')
 vim.cmd('highlight Normal guibg=none ctermbg=none')
 vim.cmd('highlight NonText guibg=none ctermbg=none')
 vim.cmd('highlight EndOfBuffer guibg=none ctermbg=none')
+vim.cmd('highlight SignColumn guibg=none ctermbg=none')
 
 require('nvim-autopairs').setup {}
