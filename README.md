@@ -11,7 +11,7 @@ This repository contains my personal configuration files.
 ## Setup guide
 Install these: <br>
 ```
-nvim sway foot waybar wofi gammastep swaybg pipewire wireplumber brightnessctl otf-font-awesome wl-clipboard clangd
+nvim sway foot waybar wofi gammastep swaybg pipewire wireplumber brightnessctl otf-font-awesome wl-clipboard clangd python-lsp-server python-pyflakes
 ```
 Run the setup script: <br>
 ```
